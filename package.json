@@ -1,0 +1,14 @@
+{
+  "name": "veteran-verification-api",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "bun --hot src/index.ts",
+    "start": "bun src/index.ts",
+    "test": "bun test"
+  },
+  "devDependencies": {
+    "@types/bun": "latest"
+  }
+}
