@@ -4,7 +4,7 @@
  * MVC-based microservice for veteran status verification
  */
 
-import { VeteranController } from './controllers/VeteranController.js';
+import { VeteranController } from './controllers/VeteranController.ts';
 
 const veteranController = new VeteranController();
 

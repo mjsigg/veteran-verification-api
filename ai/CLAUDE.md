@@ -61,3 +61,9 @@ This project integrates with the VA Veteran Confirmation API for veteran status 
 - **Address Critical**: Physical address required for veteran matching
 - **Sandbox Behavior**: Only birthDate and zipCode used for matching in sandbox
 - **Rate Limit**: 60 requests per minute
+
+## Environment Variables
+
+Required environment variables:
+- `VA_API_VETERAN_CONFIRMATION` - Your VA API key
+- `VA_API_CLIENT_NAME` - Your client identifier (e.g., "SoloSigg")

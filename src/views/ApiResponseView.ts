@@ -4,7 +4,7 @@
  * Handles formatting of API responses for clients
  */
 
-import { VeteranVerificationResult, APIError } from '../models/VeteranRequest.js';
+import { VeteranVerificationResult, APIError } from '../models/VeteranRequest.ts';
 
 export class ApiResponseView {
   /**

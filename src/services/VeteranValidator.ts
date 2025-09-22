@@ -4,7 +4,7 @@
  * Validates veteran request data according to VA API requirements
  */
 
-import { VeteranStatusRequest, ValidationResult } from '../models/VeteranRequest.js';
+import { VeteranStatusRequest, ValidationResult } from '../models/VeteranRequest.ts';
 
 export class VeteranValidator {
   /**

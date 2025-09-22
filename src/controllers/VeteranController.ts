@@ -4,11 +4,11 @@
  * Handles HTTP requests for veteran verification
  */
 
-import { vaApiConfig } from '../config/vaApiConfig.js';
-import { VeteranStatusRequest, VeteranVerificationResult } from '../models/VeteranRequest.js';
-import { ApiResponseView } from '../views/ApiResponseView.js';
-import { VeteranValidator } from '../services/VeteranValidator.js';
-import { VAApiService } from '../services/VAApiService.js';
+import { vaApiConfig } from '../config/vaApiConfig.ts';
+import { VeteranStatusRequest, VeteranVerificationResult } from '../models/VeteranRequest.ts';
+import { ApiResponseView } from '../views/ApiResponseView.ts';
+import { VeteranValidator } from '../services/VeteranValidator.ts';
+import { VAApiService } from '../services/VAApiService.ts';
 
 export class VeteranController {
   private vaApiService: VAApiService;

@@ -6,6 +6,7 @@
 
 export interface VAApiConfig {
   apiKey: string;
+  clientName: string;
   baseUrl: string;
   timeout: number;
   rateLimit: number;
@@ -17,15 +18,21 @@ export interface VAApiConfig {
  * Load and validate VA API configuration from environment
  */
 export function loadVAApiConfig(): VAApiConfig {
-  const apiKey = process.env.VA_API_KEY;
+  const apiKey = process.env.VA_API_VETERAN_CONFIRMATION;
+  const clientName = process.env.VA_API_CLIENT_NAME;
   const environment = (process.env.NODE_ENV === 'production') ? 'production' : 'sandbox';
   
   if (!apiKey) {
-    throw new Error('VA_API_KEY environment variable is required');
+    throw new Error('VA_API_VETERAN_CONFIRMATION environment variable is required');
+  }
+
+  if (!clientName) {
+    throw new Error('VA_API_CLIENT_NAME environment variable is required');
   }
 
   const config: VAApiConfig = {
     apiKey,
+    clientName,
     environment,
     baseUrl: environment === 'production' 
       ? 'https://api.va.gov/services/veteran-confirmation/v1'

@@ -4,8 +4,8 @@
  * Handles communication with the VA Veteran Confirmation API
  */
 
-import { VAApiConfig } from '../config/vaApiConfig.js';
-import { VeteranStatusRequest, VeteranStatusResponse, VeteranVerificationResult } from '../models/VeteranRequest.js';
+import { VAApiConfig } from '../config/vaApiConfig.ts';
+import { VeteranStatusRequest, VeteranStatusResponse, VeteranVerificationResult } from '../models/VeteranRequest.ts';
 
 export class VAApiService {
   private config: VAApiConfig;
@@ -53,7 +53,8 @@ export class VAApiService {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
-        'apikey': this.config.apiKey
+        'apikey': this.config.apiKey,
+        'X-VA-Client-Name': this.config.clientName
       },
       body: JSON.stringify(requestData),
       signal: AbortSignal.timeout(this.config.timeout)
@@ -84,7 +85,7 @@ export class VAApiService {
    * Check if service is properly configured
    */
   isConfigured(): boolean {
-    return !!this.config.apiKey;
+    return !!this.config.apiKey && !!this.config.clientName;
   }
 
   /**
@@ -93,6 +94,7 @@ export class VAApiService {
   getConfigInfo() {
     return {
       hasApiKey: !!this.config.apiKey,
+      hasClientName: !!this.config.clientName,
       environment: this.config.environment,
       baseUrl: this.config.baseUrl,
       timeout: this.config.timeout,

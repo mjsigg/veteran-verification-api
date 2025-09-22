@@ -63,7 +63,9 @@ bun run start
 ## 📋 Requirements
 
 - VA API key (obtain from https://developer.va.gov/apply)
-- Set `VA_API_KEY` environment variable
+- Set environment variables:
+  - `VA_API_VETERAN_CONFIRMATION` - Your VA API key
+  - `VA_API_CLIENT_NAME` - Your client identifier
 
 ## 📚 Documentation
 
