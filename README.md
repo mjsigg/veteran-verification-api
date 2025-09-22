@@ -73,11 +73,24 @@ bun run start
 - `ai/va-api-notes.md` - Research notes and implementation guidance
 - `ai/field-validation-rules.md` - Input validation requirements
 - `ai/example-requests.md` - API request/response examples
+- `ai/production-access-timeline.md` - Timeline and process for getting production access
+- `ai/production-access-requirements.md` - Comprehensive checklist for production access application
 
 ## ⚡ Rate Limits
 
 - 60 requests per minute (VA API limit)
 - Returns 429 status when exceeded
+
+## 🧪 Testing
+
+**Sandbox Environment**: 
+- Only `birthDate` and `zipCode` are used for matching
+- Requires specific VA test user data to return "confirmed" status
+- All other fields are ignored in sandbox
+
+**Production Environment**:
+- Uses full data matching algorithm with all required fields
+- Better matching accuracy with complete veteran information
 
 ---
 

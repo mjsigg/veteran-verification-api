@@ -1,0 +1,91 @@
+{
+  "created": "2025-09-21",
+  "source": "VA API Test Data",
+  "description": "Official test data for VA Veteran Confirmation API sandbox environment",
+  "testUsers": [
+    {
+      "id": "206",
+      "firstName": "Travis",
+      "middleName": null,
+      "lastName": "Jones",
+      "gender": "M",
+      "birthDate": "1950-09-06",
+      "streetAddressLine1": "3020 Saint Charles Dr",
+      "city": "Tampa",
+      "zipCode": "33618",
+      "state": "FL",
+      "country": "USA",
+      "expectedStatus": "not confirmed"
+    },
+    {
+      "id": "025",
+      "firstName": "Wesley",
+      "middleName": "Watson",
+      "lastName": "Ford",
+      "gender": "M",
+      "birthDate": "1986-05-06",
+      "streetAddressLine1": "1723 GOSNELL RD",
+      "city": "VIENNA",
+      "zipCode": "22182",
+      "state": "VA",
+      "country": "USA",
+      "expectedStatus": "confirmed"
+    },
+    {
+      "id": "014",
+      "firstName": "Alfredo",
+      "middleName": "M",
+      "lastName": "Armstrong",
+      "gender": "M",
+      "birthDate": "1993-06-08",
+      "streetAddressLine1": "17020 Tortoise St",
+      "city": "Round Rock",
+      "zipCode": "78664",
+      "state": "TX",
+      "country": "USA",
+      "expectedStatus": "confirmed"
+    },
+    {
+      "id": "001",
+      "firstName": "Tamara",
+      "middleName": "E",
+      "lastName": "Ellis",
+      "gender": "F",
+      "birthDate": "1967-06-19",
+      "streetAddressLine1": "2508 E Riverside Dr",
+      "city": "Austin",
+      "zipCode": "78741",
+      "state": "TX",
+      "country": "USA",
+      "expectedStatus": "confirmed"
+    },
+    {
+      "id": "047",
+      "firstName": "Willard",
+      "middleName": "Tim",
+      "lastName": "Riley",
+      "gender": "M",
+      "birthDate": "1959-02-25",
+      "streetAddressLine1": "26455 PARADISE VALLEY RD SPC 80",
+      "city": "WARNER SPRINGS",
+      "zipCode": "92086",
+      "state": "CA",
+      "country": "USA",
+      "expectedStatus": "not confirmed"
+    },
+    {
+      "id": "008",
+      "firstName": "Greg",
+      "middleName": "A",
+      "lastName": "Anderson",
+      "gender": "M",
+      "birthDate": "1933-04-05",
+      "streetAddressLine1": "6555 Little River Turnpike",
+      "city": "Alexandria",
+      "zipCode": "22312",
+      "state": "VA",
+      "country": "USA",
+      "expectedStatus": "not confirmed"
+    }
+  ]
+}
